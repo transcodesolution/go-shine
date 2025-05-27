@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Go Shine - Maak afspraak</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./assets/css/global.css">
+  <link rel="stylesheet" href="https://use.typekit.net/khb4ulv.css">
+</head>
+
+<body>
+  <section class="py-20">
+    <div class="md-container px-4">
+      <div>
+        <h1 class="text-playfair text-5xl font-normal text-black-900 mb-6">Welkom [Naam makelaar]</h1>
+        <p class="text-black-900 text-roboto text-base mb-16">
+          Op deze pagina kun je als makelaar eenvoudig een afspraak inplannen en de gegevens invullen van het pand dat
+          gefotografeerd moet worden. Daarnaast kun je optionele extra’s selecteren én vind je hier een overzicht van
+          alle
+          woningen die al in de planning staan of inmiddels zijn gefotografeerd. Alles overzichtelijk op één plek om
+          jouw aanbod
+          te laten shinen!
+        </p>
+        <div class="flex gap-2 mb-10 border-b-2 border-pink-50">
+          <button class="tab-btn px-8 py-4 text-black-900 text-base text-roboto font-bold bg-pink-50" data-tab="1">
+            MAAK AFSPRAAK
+          </button>
+          <button class="tab-btn px-8 py-4 text-black-900 text-base text-roboto font-bold" data-tab="2">
+            MIJN KLANTEN
+          </button>
+          <button class="tab-btn px-8 py-4 text-black-900 text-base text-roboto font-bold" data-tab="3">
+            MIJN FACTUREN
+          </button>
+        </div>
+
+        <!-- Tab 1: MAAK AFSPRAAK -->
+        <div id="tab-1" class="tab-content">
+          <h2 class="md:text-4xl font-normal text-black-900 mb-2 text-playfair">We gaan voor je aan de slag!</h2>
+          <p class="text-black-900 text-base text-roboto mb-10">Bedankt voor het doorgeven! We hebben alle gegevens
+            ontvangen en gaan alles inplannen. Je hoort snel van ons, klaar om
+            weer een woning te laten shinen!
+            Wil je weten hoe het ervoor staat? Volg de status eenvoudig via Mijn huizen.</p>
+          <button class="bg-yellow-700  px-6 py-2 font-medium text-black-900 text-roboto uppercase">Maak nog een
+            afspraak</button>
+        </div>
+        <!-- Tab 2: MIJN KLANTEN -->
+        <div id="tab-2" class="tab-content hidden">
+          <h2 class="md:text-4xl font-normal text-black-900 mb-2 text-playfair">Mijn shiners</h2>
+          <p class="text-black-900 text-base text-roboto mb-10">Hier vind je een handig overzicht van alle woningen die
+            in de planning staan. Bekijk per adres de status, geplande
+            shoots en voortgang, alles op één plek om jouw woningen te laten shinen.</p>
+
+          <div class="overflow-x-auto mb-8">
+            <table class="min-w-full text-left text-base text-black-900">
+              <thead>
+                <tr class="border-b border-gray-200 text-sm text-black-900 font-bold">
+                  <th class="py-3 px-2">Adres</th>
+                  <th class="py-3 px-2">Datum fotografie</th>
+                  <th class="py-3 px-2">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b border-gray-200 text-sm text-black-900">
+                  <td class="py-3 px-2">Akkerhoeve 9, 3438MH Nieuwegein</td>
+                  <td class="py-3 px-2">22-04-2025 09:00</td>
+                  <td class="py-3 px-2 flex items-center gap-2 justify-between">
+                    Afspraak gemaakt
+                    <a href="#" class="text-primary font-medium underline ml-2 flex items-center">
+                      Upload
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="currentColor" class="h-4 w-4 text-primary">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                          d="M9 6c0 -.852 .986 -1.297 1.623 -.783l.084 .076l6 6a1 1 0 0 1 .083 1.32l-.083 .094l-6 6l-.094 .083l-.077 .054l-.096 .054l-.036 .017l-.067 .027l-.108 .032l-.053 .01l-.06 .01l-.057 .004l-.059 .002l-.059 -.002l-.058 -.005l-.06 -.009l-.052 -.01l-.108 -.032l-.067 -.027l-.132 -.07l-.09 -.065l-.081 -.073l-.083 -.094l-.054 -.077l-.054 -.096l-.017 -.036l-.027 -.067l-.032 -.108l-.01 -.053l-.01 -.06l-.004 -.057l-.002 -12.059z" />
+                      </svg>
+                    </a>
+                  </td>
+                </tr>
+                <tr class="border-b border-gray-200 text-sm text-black-900">
+                  <td class="py-3 px-2">Wenckebachplantsoen 5, 3431TA Nieuwegein</td>
+                  <td class="py-3 px-2">25-10-2024 09:00</td>
+                  <td class="py-3 px-2 flex items-center gap-2 justify-between">
+                    Gereed
+                    <a href="#" class="text-primary font-medium underline ml-2 flex items-center">
+                      Bekijk
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="currentColor" class="h-4 w-4 text-primary">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                          d="M9 6c0 -.852 .986 -1.297 1.623 -.783l.084 .076l6 6a1 1 0 0 1 .083 1.32l-.083 .094l-6 6l-.094 .083l-.077 .054l-.096 .054l-.036 .017l-.067 .027l-.108 .032l-.053 .01l-.06 .01l-.057 .004l-.059 .002l-.059 -.002l-.058 -.005l-.06 -.009l-.052 -.01l-.108 -.032l-.067 -.027l-.132 -.07l-.09 -.065l-.081 -.073l-.083 -.094l-.054 -.077l-.054 -.096l-.017 -.036l-.027 -.067l-.032 -.108l-.01 -.053l-.01 -.06l-.004 -.057l-.002 -12.059z" />
+                      </svg>
+                    </a>
+                  </td>
+                </tr>
+                <tr class="border-b border-gray-200 text-sm text-black-900">
+                  <td class="py-3 px-2">Gezichtslaan 34, 3941JE Doorn</td>
+                  <td class="py-3 px-2">30-09-2024 15:00</td>
+                  <td class="py-3 px-2 flex items-center gap-2 justify-between">
+                    Gereed
+                    <a href="#" class="text-primary font-medium underline ml-2 flex items-center">
+                      Bekijk
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="currentColor" class="h-4 w-4 text-primary">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                          d="M9 6c0 -.852 .986 -1.297 1.623 -.783l.084 .076l6 6a1 1 0 0 1 .083 1.32l-.083 .094l-6 6l-.094 .083l-.077 .054l-.096 .054l-.036 .017l-.067 .027l-.108 .032l-.053 .01l-.06 .01l-.057 .004l-.059 .002l-.059 -.002l-.058 -.005l-.06 -.009l-.052 -.01l-.108 -.032l-.067 -.027l-.132 -.07l-.09 -.065l-.081 -.073l-.083 -.094l-.054 -.077l-.054 -.096l-.017 -.036l-.027 -.067l-.032 -.108l-.01 -.053l-.01 -.06l-.004 -.057l-.002 -12.059z" />
+                      </svg>
+                    </a>
+                  </td>
+                </tr>
+                <tr class="border-b border-gray-200 text-sm text-black-900">
+                  <td class="py-3 px-2">Gezichtslaan 34, 3941JE Doorn</td>
+                  <td class="py-3 px-2">30-09-2024 15:00</td>
+                  <td class="py-3 px-2 flex items-center gap-2 justify-between">
+                    Gereed
+                    <a href="#" class="text-primary font-medium underline ml-2 flex items-center">
+                      Bekijk
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="currentColor" class="h-4 w-4 text-primary">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                          d="M9 6c0 -.852 .986 -1.297 1.623 -.783l.084 .076l6 6a1 1 0 0 1 .083 1.32l-.083 .094l-6 6l-.094 .083l-.077 .054l-.096 .054l-.036 .017l-.067 .027l-.108 .032l-.053 .01l-.06 .01l-.057 .004l-.059 .002l-.059 -.002l-.058 -.005l-.06 -.009l-.052 -.01l-.108 -.032l-.067 -.027l-.132 -.07l-.09 -.065l-.081 -.073l-.083 -.094l-.054 -.077l-.054 -.096l-.017 -.036l-.027 -.067l-.032 -.108l-.01 -.053l-.01 -.06l-.004 -.057l-.002 -12.059z" />
+                      </svg>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="flex justify-center">
+            <button class="bg-yellow-700  px-6 py-2 font-medium text-black-900 text-roboto uppercase">
+              laad meer
+            </button>
+          </div>
+        </div>
+
+        <!-- Tab 3: MIJN FACTUREN -->
+        <div id="tab-3" class="tab-content hidden">
+          <h2 class="md:text-4xl font-normal text-black-900 mb-2 text-playfair">Zin in wat administratieve glans?</h2>
+          <p class="text-black-900 text-base text-roboto mb-10">Hier vind je al je facturen overzichtelijk bij elkaar.
+            Bekijken, downloaden, klaar. Lekker overzichtelijk, net als jij.</p>
+
+          <div class="overflow-x-auto mb-8">
+            <table class="min-w-full text-left text-base text-black-900">
+              <thead>
+                <tr class="border-b border-gray-200 text-sm text-black-900 font-bold">
+                  <th class="py-3 px-2">Factuurnummer</th>
+                  <th class="py-3 px-2">Datum</th>
+                  <th class="py-3 px-2">Bedrag</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b border-gray-200 text-sm text-black-900">
+                  <td class="py-3 px-2">20250012345</td>
+                  <td class="py-3 px-2">22-04-2025</td>
+                  <td class="py-3 px-2 flex items-center gap-2 justify-between">
+                    € 395,-
+                    <a href="#" class="text-primary font-medium underline ml-2 flex items-center">
+                      Download
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="currentColor" class="h-4 w-4 text-primary">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                          d="M9 6c0 -.852 .986 -1.297 1.623 -.783l.084 .076l6 6a1 1 0 0 1 .083 1.32l-.083 .094l-6 6l-.094 .083l-.077 .054l-.096 .054l-.036 .017l-.067 .027l-.108 .032l-.053 .01l-.06 .01l-.057 .004l-.059 .002l-.059 -.002l-.058 -.005l-.06 -.009l-.052 -.01l-.108 -.032l-.067 -.027l-.132 -.07l-.09 -.065l-.081 -.073l-.083 -.094l-.054 -.077l-.054 -.096l-.017 -.036l-.027 -.067l-.032 -.108l-.01 -.053l-.01 -.06l-.004 -.057l-.002 -12.059z" />
+                      </svg>
+                    </a>
+                  </td>
+                </tr>
+                <tr class="border-b border-gray-200 text-sm text-black-900">
+                  <td class="py-3 px-2">20250012345</td>
+                  <td class="py-3 px-2">22-04-2025</td>
+                  <td class="py-3 px-2 flex items-center gap-2 justify-between">
+                    € 395,-
+                    <a href="#" class="text-primary font-medium underline ml-2 flex items-center">
+                      Download
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="currentColor" class="h-4 w-4 text-primary">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                          d="M9 6c0 -.852 .986 -1.297 1.623 -.783l.084 .076l6 6a1 1 0 0 1 .083 1.32l-.083 .094l-6 6l-.094 .083l-.077 .054l-.096 .054l-.036 .017l-.067 .027l-.108 .032l-.053 .01l-.06 .01l-.057 .004l-.059 .002l-.059 -.002l-.058 -.005l-.06 -.009l-.052 -.01l-.108 -.032l-.067 -.027l-.132 -.07l-.09 -.065l-.081 -.073l-.083 -.094l-.054 -.077l-.054 -.096l-.017 -.036l-.027 -.067l-.032 -.108l-.01 -.053l-.01 -.06l-.004 -.057l-.002 -12.059z" />
+                      </svg>
+                    </a>
+                  </td>
+                </tr>
+                <tr class="border-b border-gray-200 text-sm text-black-900">
+                  <td class="py-3 px-2">20250012345</td>
+                  <td class="py-3 px-2">22-04-2025</td>
+                  <td class="py-3 px-2 flex items-center gap-2 justify-between">
+                    € 395,-
+                    <a href="#" class="text-primary font-medium underline ml-2 flex items-center">
+                      Download
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="currentColor" class="h-4 w-4 text-primary">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                          d="M9 6c0 -.852 .986 -1.297 1.623 -.783l.084 .076l6 6a1 1 0 0 1 .083 1.32l-.083 .094l-6 6l-.094 .083l-.077 .054l-.096 .054l-.036 .017l-.067 .027l-.108 .032l-.053 .01l-.06 .01l-.057 .004l-.059 .002l-.059 -.002l-.058 -.005l-.06 -.009l-.052 -.01l-.108 -.032l-.067 -.027l-.132 -.07l-.09 -.065l-.081 -.073l-.083 -.094l-.054 -.077l-.054 -.096l-.017 -.036l-.027 -.067l-.032 -.108l-.01 -.053l-.01 -.06l-.004 -.057l-.002 -12.059z" />
+                      </svg>
+                    </a>
+                  </td>
+                </tr>
+                <tr class="border-b border-gray-200 text-sm text-black-900">
+                  <td class="py-3 px-2">20250012345</td>
+                  <td class="py-3 px-2">22-04-2025</td>
+                  <td class="py-3 px-2 flex items-center gap-2 justify-between">
+                    € 395,-
+                    <a href="#" class="text-primary font-medium underline ml-2 flex items-center">
+                      Download
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="currentColor" class="h-4 w-4 text-primary">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                          d="M9 6c0 -.852 .986 -1.297 1.623 -.783l.084 .076l6 6a1 1 0 0 1 .083 1.32l-.083 .094l-6 6l-.094 .083l-.077 .054l-.096 .054l-.036 .017l-.067 .027l-.108 .032l-.053 .01l-.06 .01l-.057 .004l-.059 .002l-.059 -.002l-.058 -.005l-.06 -.009l-.052 -.01l-.108 -.032l-.067 -.027l-.132 -.07l-.09 -.065l-.081 -.073l-.083 -.094l-.054 -.077l-.054 -.096l-.017 -.036l-.027 -.067l-.032 -.108l-.01 -.053l-.01 -.06l-.004 -.057l-.002 -12.059z" />
+                      </svg>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="flex justify-center">
+            <button class="bg-yellow-700  px-6 py-2 font-medium text-black-900 text-roboto uppercase">
+              laad meer
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <script src="./tailwind.config.js"></script>
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

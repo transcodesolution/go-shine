@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Playfair Display";
+  src: url(../fonts/PlayfairDisplay-VariableFont_wght.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto-VariableFont_wdth\wght.ttf) format("truetype");
+}
+
+.text-playfair {
+  font-family: "Playfair Display", serif;
+}
+
+.text-roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+@media (min-width: 768px) {
+  .md-container {
+    max-width: 991px;
+    margin: auto;
+  }
+}
+
+.tabs::-webkit-scrollbar {
+  height: 0px;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Go Shine - INLOGGEN</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./assets/css/global.css">
+  <link rel="stylesheet" href="https://use.typekit.net/khb4ulv.css">
+</head>
+
+<body>
+  <section class="py-20">
+    <div class="md-container px-4">
+      <div>
+        <h1 class="text-playfair text-5xl font-normal text-black-900 mb-6">Log in en laat het shinen!</h1>
+        <p class="text-black-900 text-roboto text-base mb-16">
+          Welkom terug! Log in om jouw woningpresentaties te beheren, nieuwe opdrachten aan te maken en alles klaar te
+          zetten om
+          weer een huis te laten shinen.
+        </p>
+        <form>
+          <div class="md:flex gap-8">
+            <input type="email" placeholder="E-mail adres"
+              class="md:w-1/2 border border-gray-300 px-4 py-3 focus:outline-none focus:border-pink-950" />
+            <div class="relative md:w-1/2">
+              <input id="passwordInput" type="password" placeholder="Wachtwoord"
+                class="w-full border border-gray-300 px-4 py-3 focus:outline-none focus:border-pink-950 pr-10" />
+              <span id="togglePassword" class="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer">
+                <!-- Eye-off icon (hidden by default) -->
+                <svg id="eyeOffIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                  fill="none" stroke="#4E273A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  style="display: block;">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M10.585 10.587a2 2 0 0 0 2.829 2.828" />
+                  <path
+                    d="M16.681 16.673a8.717 8.717 0 0 1 -4.681 1.327c-3.6 0 -6.6 -2 -9 -6c1.272 -2.12 2.712 -3.678 4.32 -4.674m2.86 -1.146a9.055 9.055 0 0 1 1.82 -.18c3.6 0 6.6 2 9 6c-.666 1.11 -1.379 2.067 -2.138 2.87" />
+                  <path d="M3 3l18 18" />
+                </svg>
+                <!-- Eye icon (shown when password is visible) -->
+                <svg id="eyeIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                  fill="none" stroke="#4E273A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  style="display: none;">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                  <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                </svg>
+              </span>
+            </div>
+          </div>
+          <div class="flex items-center justify-between mt-6">
+            <a href="#" class="text-primary text-base underline">Wachtwoord vergeten</a>
+            <a href="#" type="button" class="bg-yellow-700  px-6 py-2 font-medium text-black-900">
+              INLOGGEN
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <script src="./tailwind.config.js"></script>
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
