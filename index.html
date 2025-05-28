@@ -11,20 +11,20 @@
 </head>
 
 <body>
-  <section class="py-20">
+  <section class="md:py-20 py-10">
     <div class="md-container px-4">
       <div>
-        <h1 class="text-playfair text-5xl font-normal text-black-900 mb-6">Log in en laat het shinen!</h1>
-        <p class="text-black-900 text-roboto text-base mb-16">
+        <h1 class="text-playfair text-3xl md:text-5xl font-normal text-black-900 mb-6">Log in en laat het shinen!</h1>
+        <p class="text-black-900 text-roboto text-base mb-10 md:mb-16">
           Welkom terug! Log in om jouw woningpresentaties te beheren, nieuwe opdrachten aan te maken en alles klaar te
           zetten om
           weer een huis te laten shinen.
         </p>
         <form>
-          <div class="md:flex gap-8">
+          <div class="flex gap-4 md:gap-8 flex-wrap md:flex-nowrap">
             <input type="email" placeholder="E-mail adres"
-              class="md:w-1/2 border border-gray-300 px-4 py-3 focus:outline-none focus:border-pink-950" />
-            <div class="relative md:w-1/2">
+              class="w-full md:w-1/2 border border-gray-300 px-4 py-3 focus:outline-none focus:border-pink-950" />
+            <div class="relative md:w-1/2 w-full">
               <input id="passwordInput" type="password" placeholder="Wachtwoord"
                 class="w-full border border-gray-300 px-4 py-3 focus:outline-none focus:border-pink-950 pr-10" />
               <span id="togglePassword" class="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer">
@@ -49,9 +49,9 @@
               </span>
             </div>
           </div>
-          <div class="flex items-center justify-between mt-6">
+          <div class="flex md:items-center justify-between mt-10 md:mt-6 flex-col gap-4 md:flex-row">
             <a href="#" class="text-primary text-base underline">Wachtwoord vergeten</a>
-            <a href="#" type="button" class="bg-yellow-700  px-6 py-2 font-medium text-black-900">
+            <a href="#" type="button" class="bg-yellow-700  px-6 py-2 font-medium text-black-900 flex justify-center">
               INLOGGEN
             </a>
           </div>

@@ -11,11 +11,11 @@
 </head>
 
 <body>
-  <section class="py-20">
+  <section class="md:py-20 py-10">
     <div class="md-container px-4">
       <div>
-        <h1 class="text-playfair text-5xl font-normal text-black-900 mb-6">Welkom [Naam makelaar]</h1>
-        <p class="text-black-900 text-roboto text-base mb-16">
+        <h1 class="text-playfair text-3xl md:text-5xl font-normal text-black-900 mb-6">Welkom [Naam makelaar]</h1>
+        <p class="text-black-900 text-roboto text-base mb-10 md:mb-16">
           Op deze pagina kun je als makelaar eenvoudig een afspraak inplannen en de gegevens invullen van het pand dat
           gefotografeerd moet worden. Daarnaast kun je optionele extra’s selecteren én vind je hier een overzicht van
           alle
@@ -23,14 +23,17 @@
           jouw aanbod
           te laten shinen!
         </p>
-        <div class="flex gap-2 mb-10 border-b-2 border-pink-50">
-          <button class="tab-btn px-8 py-4 text-black-900 text-base text-roboto font-bold bg-pink-50" data-tab="1">
+        <div class="flex gap-2 mb-10 border-b-2 border-pink-50 overflow-x-auto">
+          <button class="tab-btn px-8 py-4 text-black-900 text-base text-roboto font-bold bg-pink-50 whitespace-nowrap"
+            data-tab="1">
             MAAK AFSPRAAK
           </button>
-          <button class="tab-btn px-8 py-4 text-black-900 text-base text-roboto font-bold" data-tab="2">
+          <button class="tab-btn px-8 py-4 text-black-900 text-base text-roboto font-bold whitespace-nowrap"
+            data-tab="2">
             MIJN KLANTEN
           </button>
-          <button class="tab-btn px-8 py-4 text-black-900 text-base text-roboto font-bold" data-tab="3">
+          <button class="tab-btn px-8 py-4 text-black-900 text-base text-roboto font-bold whitespace-nowrap"
+            data-tab="3">
             MIJN FACTUREN
           </button>
         </div>
@@ -39,27 +42,83 @@
         <div id="tab-1" class="tab-content">
 
           <!-- Form: Laat dit adres shinen! -->
-          <div class="mb-20">
-            <h2 class="md:text-4xl font-normal text-black-900 mb-2 text-playfair">Laat dit adres shinen!</h2>
+          <div class="md:mb-20 mb-10">
+            <h2 class="md:text-4xl text-2xl font-normal text-black-900 mb-2 text-playfair">Laat dit adres shinen!</h2>
             <p class="text-black-900 text-base text-roboto mb-10">Geef ons alle info over het te fotograferen adres, dan
               zorgen wij voor de spotlights.</p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
-              <div class="col-span-2 gap-8 flex">
-                <input type="text" placeholder="Voornaam"
-                  class="w-3/4 border border-gray-300 px-4 py-3 focus:outline-none focus:border-pink-950" />
-                <input type="text" placeholder="Tussenvoegsel"
-                  class="border border-gray-300 px-4 py-3 focus:outline-none focus:border-pink-950" />
+            <div class="grid grid-cols-1 md:grid-cols-3 md:gap-8 gap-y-4 mb-10">
+              <div class="col-span-2 md:gap-8 gap-4 flex md:flex-row flex-col">
+                <!-- <input type="text" placeholder="Voornaam"
+                  class="md:w-3/4 border border-gray-300 px-4 py-3 focus:outline-none focus:border-pink-950" /> -->
+                <div class="relative w-full md:w-3/4">
+                  <input type="text" id="voornaam" placeholder=""
+                    class="peer w-full border border-gray-300 px-4 py-3 pt-4 focus:outline-none focus:border-pink-950 transition-all" />
+                  <label for="voornaam"
+                    class="absolute left-4  text-gray-400 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-0 peer-focus:text-sm peer-focus:text-gray-400">
+                    Voornaam
+                  </label>
+                  <!-- Checkmark SVG -->
+                  <svg class="absolute transform translate-y-[-50%]  top-1/2 right-5 text-green-500 " height="24px"
+                    width="24px" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div class="relative w-full md:w-1/2">
+                  <input type="text" id="tussenvoegsel" placeholder=""
+                    class="peer w-full border border-gray-300 px-4 py-3 pt-4 focus:outline-none focus:border-pink-950 transition-all" />
+                  <label for="tussenvoegsel"
+                    class="absolute left-4  text-gray-400 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-0 peer-focus:text-sm peer-focus:text-gray-400">
+                    Tussenvoegsel
+                  </label>
+                  <!-- Checkmark SVG -->
+                  <svg class="absolute transform translate-y-[-50%]  top-1/2 right-5 text-green-500 " height="24px"
+                    width="24px" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
               </div>
-
-              <input type="text" placeholder="Achternaam"
-                class="col-span-1 border border-gray-300 px-4 py-3 focus:outline-none focus:border-pink-950" />
+              <div class="relative col-span-1 ">
+                <input type="text" id="achternaam" placeholder=""
+                  class="peer w-full border border-gray-300 px-4 py-3 pt-4 focus:outline-none focus:border-pink-950 transition-all" />
+                <label for="achternaam"
+                  class="absolute left-4  text-gray-400 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-0 peer-focus:text-sm peer-focus:text-gray-400">
+                  Achternaam
+                </label>
+                <!-- Checkmark SVG -->
+                <svg class="absolute transform translate-y-[-50%]  top-1/2 right-5 text-green-500 " height="24px"
+                  width="24px" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-4">
               <div class="col-span-2 gap-8 flex">
-                <input type="text" placeholder="Postcode"
-                  class="w-3/4 border border-gray-300 px-4 py-3 focus:outline-none focus:border-pink-950" />
-                <input type="text" placeholder="Huisnummer"
-                  class="border border-gray-300 px-4 py-3 focus:outline-none focus:border-pink-950" />
+                <div class="relative w-full md:w-3/4">
+                  <input type="text" id="postcode" placeholder=""
+                    class="peer w-full border border-gray-300 px-4 py-3 pt-4 focus:outline-none focus:border-pink-950 transition-all" />
+                  <label for="postcode"
+                    class="absolute left-4  text-gray-400 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-0 peer-focus:text-sm peer-focus:text-gray-400">
+                    Postcode
+                  </label>
+                  <!-- Checkmark SVG -->
+                  <svg class="absolute transform translate-y-[-50%]  top-1/2 right-5 text-green-500 " height="24px"
+                    width="24px" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div class="relative w-full md:w-1/2">
+                  <input type="text" id="huisnummer" placeholder=""
+                    class="peer w-full border border-gray-300 px-4 py-3 pt-4 focus:outline-none focus:border-pink-950 transition-all" />
+                  <label for="huisnummer"
+                    class="absolute left-4  text-gray-400 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-0 peer-focus:text-sm peer-focus:text-gray-400">
+                    Huisnummer
+                  </label>
+                  <!-- Checkmark SVG -->
+                  <svg class="absolute transform translate-y-[-50%]  top-1/2 right-5 text-green-500 " height="24px"
+                    width="24px" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
               </div>
             </div>
 
@@ -72,19 +131,74 @@
                 disabled />
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-              <input type="text" placeholder="Telefoonnummer eigenaar"
-                class="border border-gray-300 px-4 py-3 focus:outline-none focus:border-pink-950" />
-              <input type="text" placeholder="Telefoonnummer partner"
-                class="border border-gray-300 px-4 py-3 focus:outline-none focus:border-pink-950" />
-              <div class="flex flex-col">
-                <input type="email" placeholder="E-mail adres eigenaar"
-                  class="border border-gray-300 px-4 py-3 focus:outline-none focus:border-pink-950" />
+              <div>
+                <div class="relative">
+                  <input type="text" id="Telefoonnummer" placeholder=""
+                    class="peer w-full border border-gray-300 border-l-4 border-l-red-500 px-4 py-3 pt-4 focus:outline-none focus:border-pink-950 transition-all" />
+                  <label for="Telefoonnummer"
+                    class="absolute left-4  text-gray-400 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-0 peer-focus:text-sm peer-focus:text-gray-400">
+                    Telefoonnummer eigenaar
+                  </label>
+                  <svg class="absolute transform translate-y-[-50%]  top-1/2 right-5 text-red-500 " fill="none"
+                    height="24px" width="24px" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 100 20 10 10 0 000-20z" />
+                  </svg>
+                </div>
+                <p class="text-xs text-red-500">
+                  Telefoonnummer aanvrager is verplicht
+                </p>
+              </div>
+              <div>
+                <div class="relative">
+                  <input type="text" id="partner" placeholder=""
+                    class="peer w-full border border-gray-300 px-4 py-3 pt-4 focus:outline-none focus:border-pink-950 transition-all" />
+                  <label for="partner"
+                    class="absolute left-4  text-gray-400 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-0 peer-focus:text-sm peer-focus:text-gray-400">
+                    Telefoonnummer partner
+                  </label>
+                  <svg class="absolute transform translate-y-[-50%]  top-1/2 right-5 text-green-500 " height="24px"
+                    width="24px" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+
+              </div>
+              <div>
+                <div class="relative">
+                  <input type="text" id="email-addreess" placeholder=""
+                    class="peer w-full border border-gray-300   px-4 py-3 pt-4 focus:outline-none focus:border-pink-950 transition-all" />
+                  <label for="email-addreess"
+                    class="absolute left-4  text-gray-400 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-0 peer-focus:text-sm peer-focus:text-gray-400">
+                    E-mail adres eigenaar
+                  </label>
+                  <svg class="absolute transform translate-y-[-50%]  top-1/2 right-5 text-green-500 " height="24px"
+                    width="24px" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
                 <span class="text-xs text-gray-400">Gebruikt voor bevestiging & brochure</span>
               </div>
-              <div class="flex flex-col">
+              <div>
+                <div class="relative">
+                  <input type="text" id="partner-email-addreess" placeholder=""
+                    class="peer w-full border border-gray-300   px-4 py-3 pt-4 focus:outline-none focus:border-pink-950 transition-all" />
+                  <label for="partner-email-addreess"
+                    class="absolute left-4  text-gray-400 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-0 peer-focus:text-sm peer-focus:text-gray-400">
+                    E-mail adres partner
+                  </label>
+                  <svg class="absolute transform translate-y-[-50%]  top-1/2 right-5 text-green-500 " height="24px"
+                    width="24px" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <!-- <span class="text-xs text-gray-400">Gebruikt voor bevestiging & brochure</span> -->
+              </div>
+
+              <!-- <div class="flex flex-col">
                 <input type="email" placeholder="E-mail adres partner"
                   class="border border-gray-300 px-4 py-3 focus:outline-none focus:border-pink-950" />
-              </div>
+              </div> -->
 
             </div>
 
@@ -92,13 +206,13 @@
 
           <!-- GoShine All-in Pakket -->
           <div class="mb-10">
-            <h2 class="md:text-4xl font-normal text-black-900 text-playfair ">GoShine All-in Pakket</h2>
+            <h2 class="md:text-4xl text-2xl font-normal text-black-900 text-playfair ">GoShine All-in Pakket</h2>
             <p class="text-black-900 text-base text-roboto mb-10">
               Elke woning krijgt dit GoShine All-in pakket. Compleet, professioneel en klaar om te shinen. Hier zijn
               extra’s
               losvraag, zodat elk huis presentabel is en direct door Makelaars Ready te maken.
             </p>
-            <div class="flex justify-between items-start gap-4 mb-6">
+            <div class="flex justify-between items-start gap-5 md:gap-4 mb-6">
               <div class="flex items-center gap-6 pb-2">
                 <label class="flex items-center cursor-pointer relative">
                   <input type="checkbox"
@@ -129,8 +243,8 @@
               </div>
               <p class="text-base text-gray-600 text-roboto font-bold">€ 395,-</p>
             </div>
-            <div class="flex justify-between items-start gap-4 mb-6">
-              <div class="flex items-center gap-6 pb-2">
+            <div class="flex justify-end md:justify-between items-start gap-5 md:gap-4 mb-6 flex-wrap ">
+              <div class="flex items-center gap-6 pb-2 order-1 md:order-none">
                 <label class="flex items-center cursor-pointer relative">
                   <input type="checkbox"
                     class="peer h-6 w-6 cursor-pointer transition-all appearance-none hover:shadow-md border border-gray-400 checked:bg-white checked:border-gray-400"
@@ -147,14 +261,14 @@
                 </label>
 
               </div>
-              <div class="flex-1">
+              <div class="flex-1 order-2 md:order-none">
                 <p class="text-base text-gray-600 font-roboto font-normal mb-2">Extra indruk</p>
                 <p class="text-xs text-gray-600 font-roboto">Een artist impression toont hoe een situatie er in de
                   toekomst uit kan zien en kost €150,- per beeld.
                 </p>
               </div>
               <!-- Dropdown menu -->
-              <div class="w-52 relative border border-gray-600 p-2 px-4">
+              <div class="w-[calc(100%-44px)] md:w-52 relative border border-gray-600 p-2 px-4 order-4 md:order-none ">
                 <div class="text-gray-400 text-sm mb-1">Aantal beelden</div>
                 <!-- Custom Dropdown Button -->
                 <button id="dropdownButton" type="button"
@@ -175,9 +289,9 @@
                   <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer" data-value="4">4</li>
                 </ul>
               </div>
-              <p class="text-base text-gray-600 text-roboto font-bold">€ 150,-</p>
+              <p class="text-base text-gray-600 text-roboto font-bold order-3 md:order-none">€ 150,-</p>
             </div>
-            <div class="flex justify-between items-start gap-4 mb-6">
+            <div class="flex justify-between items-start gap-5 md:gap-4 mb-6">
               <div class="flex items-center gap-6 pb-2">
                 <label class="flex items-center cursor-pointer relative">
                   <input type="checkbox"
@@ -203,7 +317,7 @@
               </div>
               <p class="text-base text-gray-200 text-roboto font-bold">€ 395,-</p>
             </div>
-            <div class="flex justify-between items-start gap-4 mb-6">
+            <div class="flex justify-between items-start gap-5 md:gap-4 mb-6">
               <div class="flex items-center gap-6 pb-2">
                 <label class="flex items-center cursor-pointer relative">
                   <input type="checkbox"
@@ -233,17 +347,17 @@
               </div>
               <p class="text-base text-gray-200 text-roboto font-bold">€ 275,-</p>
             </div>
-            <div class="border-t border-gray-200 mt-8 pt-4 flex justify-end">
+            <div class="border-t border-gray-200 mt-8 pt-4">
               <div class="text-right space-y-1">
-                <div class="flex justify-end gap-4">
+                <div class="flex justify-between md:justify-end gap-4">
                   <span class="text-gray-600 text-base text-roboto">Totaalbedrag (excl. BTW):</span>
                   <span class="text-gray-600 text-base text-roboto">€ 595,-</span>
                 </div>
-                <div class="flex justify-end gap-4">
+                <div class="flex justify-between md:justify-end gap-4">
                   <span class="text-gray-600 text-base text-roboto">BTW:</span>
                   <span class="text-gray-600 text-base text-roboto">124,95</span>
                 </div>
-                <div class="flex justify-end gap-4 font-bold">
+                <div class="flex justify-between md:justify-end gap-4 font-bold">
                   <span class="text-gray-600 text-base text-roboto">Totaalbedrag (incl. BTW):</span>
                   <span class="text-gray-600 text-base text-roboto">€ 719,95</span>
                 </div>
@@ -254,82 +368,82 @@
           <!-- Fotograaf voorkeurdag -->
           <div class="mb-8">
             <h2 class="text-base text-gray-600 text-roboto mb-2">Fotografie voorkeursdag:</h2>
-            <div class="flex mb-4">
-              <div role="button" class="flex w-full items-center rounded-lg p-0 transition-all">
-                <label for="react-horizontal" class="flex w-full cursor-pointer items-center px-3 py-2">
+            <div class="flex gap-4 mb-4 flex-wrap">
+              <div role="button" class="flex items-center rounded-lg p-0 transition-all">
+                <label for="monday" class="flex w-full cursor-pointer items-center px-3 py-2">
                   <div class="inline-flex items-center">
-                    <label class="relative flex items-center cursor-pointer" for="react-horizontal">
+                    <label class="relative flex items-center cursor-pointer" for="monday">
                       <input name="framework-horizontal" type="radio"
                         class="peer h-5 w-5 cursor-pointer appearance-none rounded-full border-1 checked:border-8 border-gray-300 checked:border-gray-600 transition-all"
-                        id="react-horizontal" checked />
+                        id="monday" checked />
                       <span
                         class="absolute bg-white w-2 h-2 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
                     </label>
-                    <label class="ml-2 text-base text-gray-600 text-roboto cursor-pointer" for="react-horizontal">
+                    <label class="ml-2 text-base text-gray-600 text-roboto cursor-pointer" for="monday">
                       Maandag
                     </label>
                   </div>
                 </label>
               </div>
-              <div role="button" class="flex w-full items-center rounded-lg p-0 transition-all ">
-                <label for="vue-horizontal" class="flex w-full cursor-pointer items-center px-3 py-2">
+              <div role="button" class="flex items-center rounded-lg p-0 transition-all ">
+                <label for="tuseday" class="flex w-full cursor-pointer items-center px-3 py-2">
                   <div class="inline-flex items-center">
-                    <label class="relative flex items-center cursor-pointer" for="vue-horizontal">
+                    <label class="relative flex items-center cursor-pointer" for="tuseday">
                       <input name="framework-horizontal" type="radio"
                         class="peer h-5 w-5 cursor-pointer appearance-none rounded-full border checked:border-8 border-gray-300 checked:border-gray-600 transition-all"
-                        id="vue-horizontal" />
+                        id="tuseday" />
                       <span
                         class="absolute bg-white w-2 h-2 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
                     </label>
-                    <label class="text-base text-gray-600 text-roboto cursor-pointer ml-2 " for="vue-horizontal">
+                    <label class="text-base text-gray-600 text-roboto cursor-pointer ml-2 " for="tuseday">
                       Dinsdag
                     </label>
                   </div>
                 </label>
               </div>
-              <div role="button" class="flex w-full items-center rounded-lg p-0 transition-all">
-                <label for="svelte-horizontal" class="flex w-full cursor-pointer items-center px-3 py-2">
+              <div role="button" class="flex items-center rounded-lg p-0 transition-all">
+                <label for="Wednesday" class="flex w-full cursor-pointer items-center px-3 py-2">
                   <div class="inline-flex items-center">
-                    <label class="relative flex items-center cursor-pointer" for="svelte-horizontal">
+                    <label class="relative flex items-center cursor-pointer" for="Wednesday">
                       <input name="framework-horizontal" type="radio"
                         class="peer h-5 w-5 cursor-pointer appearance-none rounded-full border checked:border-8 border-gray-300 checked:border-gray-600 transition-all"
-                        id="svelte-horizontal" />
+                        id="Wednesday" />
                       <span
                         class="absolute bg-white w-2 h-2 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
                     </label>
-                    <label class="text-base text-gray-600 text-roboto cursor-pointer ml-2 " for="svelte-horizontal">
+                    <label class="text-base text-gray-600 text-roboto cursor-pointer ml-2 " for="Wednesday">
                       Woensdag
                     </label>
                   </div>
                 </label>
               </div>
-              <div role="button" class="flex w-full items-center rounded-lg p-0 transition-all">
-                <label for="svelte-horizontal" class="flex w-full cursor-pointer items-center px-3 py-2">
+              <div role="button" class="flex items-center rounded-lg p-0 transition-all">
+                <label for="Thursday" class="flex w-full cursor-pointer items-center px-3 py-2">
                   <div class="inline-flex items-center">
-                    <label class="relative flex items-center cursor-pointer" for="svelte-horizontal">
+                    <label class="relative flex items-center cursor-pointer" for="Thursday">
                       <input name="framework-horizontal" type="radio"
                         class="peer h-5 w-5 cursor-pointer appearance-none rounded-full border checked:border-8 border-gray-300 checked:border-gray-600 transition-all"
-                        id="svelte-horizontal" />
+                        id="Thursday" />
                       <span
                         class="absolute bg-white w-2 h-2 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
                     </label>
-                    <label class="text-base text-gray-600 text-roboto cursor-pointer ml-2 " for="svelte-horizontal">
+                    <label class="text-base text-gray-600 text-roboto cursor-pointer ml-2 " for="Thursday">
                       Donderdag
                     </label>
                   </div>
                 </label>
               </div>
-              <div role="button" class="flex w-full items-center rounded-lg p-0 transition-all">
-                <label for="svelte-horizontal" class="flex w-full cursor-pointer items-center px-3 py-2">
+              <div role="button" class="flex items-center rounded-lg p-0 transition-all">
+                <label for="Friday" class="flex w-full cursor-pointer items-center px-3 py-2">
                   <div class="inline-flex items-center">
-                    <label class="relative flex items-center cursor-pointer" for="svelte-horizontal">
+                    <label class="relative flex items-center cursor-pointer" for="Friday">
                       <input name="framework-horizontal" type="radio"
                         class="peer h-5 w-5 cursor-pointer appearance-none rounded-full border checked:border-8 border-gray-300 checked:border-gray-600 transition-all"
-                        id="svelte-horizontal" />
+                        id="Friday" />
                       <span
                         class="absolute bg-white w-2 h-2 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
                     </label>
-                    <label class="text-base text-gray-600 text-roboto cursor-pointer ml-2 " for="svelte-horizontal">
+                    <label class="text-base text-gray-600 text-roboto cursor-pointer ml-2 " for="Friday">
                       Vrijdag
                     </label>
                   </div>
@@ -355,7 +469,7 @@
               </div>
             </div>
           </div>
-          <div class="flex justify-between items-center">
+          <div class="flex justify-between items-center flex-wrap md:flex-nowrap ">
             <div class="flex items-center justify-between gap-4 pb-2">
               <label class="flex items-center cursor-pointer relative">
                 <input type="checkbox"
@@ -374,7 +488,7 @@
               <span for="akkoord" class="text-gray-600 text-base">Ik ga akkoord met de algemene voorwaarden van
                 GoShine</span>
             </div>
-            <button class="bg-yellow-700  px-6 py-2 font-medium text-black-900 text-roboto">MAAK
+            <button class="bg-yellow-700  px-6 py-2 font-medium text-black-900 text-roboto w-full md:w-auto">MAAK
               AFSPRAAK</button>
           </div>
 
@@ -382,25 +496,25 @@
 
         <!-- Tab 2: MIJN KLANTEN -->
         <div id="tab-2" class="tab-content hidden">
-          <h2 class="md:text-4xl font-normal text-black-900 mb-2 text-playfair">Mijn shiners</h2>
+          <h2 class="text-2xl md:text-4xl font-normal text-black-900 mb-2 text-playfair">Mijn shiners</h2>
           <p class="text-black-900 text-base text-roboto mb-10">Hier vind je een handig overzicht van alle woningen die
             in de planning staan. Bekijk per adres de status, geplande
             shoots en voortgang, alles op één plek om jouw woningen te laten shinen.</p>
 
           <div class="overflow-x-auto mb-8">
-            <table class="min-w-full text-left text-base text-black-900">
-              <thead>
+            <table class="min-w-full text-left text-base text-black-900 ">
+              <thead class="md:contents hidden">
                 <tr class="border-b border-gray-200 text-sm text-black-900 font-bold">
-                  <th class="py-3 px-2">Adres</th>
-                  <th class="py-3 px-2">Datum fotografie</th>
-                  <th class="py-3 px-2">Status</th>
+                  <th class="md:py-3 md:px-2">Adres</th>
+                  <th class="md:py-3 md:px-2">Datum fotografie</th>
+                  <th class="md:py-3 md:px-2">Status</th>
                 </tr>
               </thead>
               <tbody>
-                <tr class="border-b border-gray-200 text-sm text-black-900">
-                  <td class="py-3 px-2">Akkerhoeve 9, 3438MH Nieuwegein</td>
-                  <td class="py-3 px-2">22-04-2025 09:00</td>
-                  <td class="py-3 px-2 flex items-center gap-2 justify-between">
+                <tr class="border-b border-gray-200 text-sm text-black-900 flex md:table-row flex-col py-2">
+                  <td class="md:py-3 md:px-2">Akkerhoeve 9, 3438MH Nieuwegein</td>
+                  <td class="md:py-3 md:px-2">22-04-2025 09:00</td>
+                  <td class="md:py-3 md:px-2 flex items-center gap-2 flex-1 justify-between">
                     Afspraak gemaakt
                     <a href="#" class="text-primary font-medium underline ml-2 flex items-center">
                       Upload
@@ -413,10 +527,10 @@
                     </a>
                   </td>
                 </tr>
-                <tr class="border-b border-gray-200 text-sm text-black-900">
-                  <td class="py-3 px-2">Wenckebachplantsoen 5, 3431TA Nieuwegein</td>
-                  <td class="py-3 px-2">25-10-2024 09:00</td>
-                  <td class="py-3 px-2 flex items-center gap-2 justify-between">
+                <tr class="border-b border-gray-200 text-sm text-black-900 flex md:table-row flex-col py-2">
+                  <td class="md:py-3 md:px-2">Wenckebachplantsoen 5, 3431TA Nieuwegein</td>
+                  <td class="md:py-3 md:px-2">25-10-2024 09:00</td>
+                  <td class="md:py-3 md:px-2 flex items-center gap-2 justify-between">
                     Gereed
                     <a href="#" class="text-primary font-medium underline ml-2 flex items-center">
                       Bekijk
@@ -429,10 +543,10 @@
                     </a>
                   </td>
                 </tr>
-                <tr class="border-b border-gray-200 text-sm text-black-900">
-                  <td class="py-3 px-2">Gezichtslaan 34, 3941JE Doorn</td>
-                  <td class="py-3 px-2">30-09-2024 15:00</td>
-                  <td class="py-3 px-2 flex items-center gap-2 justify-between">
+                <tr class="border-b border-gray-200 text-sm text-black-900 flex md:table-row flex-col py-2">
+                  <td class="md:py-3 md:px-2">Gezichtslaan 34, 3941JE Doorn</td>
+                  <td class="md:py-3 md:px-2">30-09-2024 15:00</td>
+                  <td class="md:py-3 md:px-2 flex items-center gap-2 justify-between">
                     Gereed
                     <a href="#" class="text-primary font-medium underline ml-2 flex items-center">
                       Bekijk
@@ -444,11 +558,12 @@
                       </svg>
                     </a>
                   </td>
+                  </td>
                 </tr>
-                <tr class="border-b border-gray-200 text-sm text-black-900">
-                  <td class="py-3 px-2">Gezichtslaan 34, 3941JE Doorn</td>
-                  <td class="py-3 px-2">30-09-2024 15:00</td>
-                  <td class="py-3 px-2 flex items-center gap-2 justify-between">
+                <tr class="border-b border-gray-200 text-sm text-black-900 flex md:table-row flex-col py-2">
+                  <td class="md:py-3 md:px-2">Gezichtslaan 34, 3941JE Doorn</td>
+                  <td class="md:py-3 md:px-2">30-09-2024 15:00</td>
+                  <td class="md:py-3 md:px-2 flex items-center gap-2 justify-between">
                     Gereed
                     <a href="#" class="text-primary font-medium underline ml-2 flex items-center">
                       Bekijk
@@ -465,7 +580,7 @@
             </table>
           </div>
           <div class="flex justify-center">
-            <button class="bg-yellow-700  px-6 py-2 font-medium text-black-900 text-roboto uppercase">
+            <button class="bg-yellow-700  px-6 py-2 font-medium text-black-900 text-roboto uppercase  w-full md:w-auto">
               laad meer
             </button>
           </div>
@@ -473,24 +588,25 @@
 
         <!-- Tab 3: MIJN FACTUREN -->
         <div id="tab-3" class="tab-content hidden">
-          <h2 class="md:text-4xl font-normal text-black-900 mb-2 text-playfair">Zin in wat administratieve glans?</h2>
+          <h2 class="text-2xl md:text-4xl font-normal text-black-900 mb-2 text-playfair">Zin in wat administratieve
+            glans?</h2>
           <p class="text-black-900 text-base text-roboto mb-10">Hier vind je al je facturen overzichtelijk bij elkaar.
             Bekijken, downloaden, klaar. Lekker overzichtelijk, net als jij.</p>
 
           <div class="overflow-x-auto mb-8">
             <table class="min-w-full text-left text-base text-black-900">
-              <thead>
+              <thead class="md:contents hidden">
                 <tr class="border-b border-gray-200 text-sm text-black-900 font-bold">
-                  <th class="py-3 px-2">Factuurnummer</th>
-                  <th class="py-3 px-2">Datum</th>
-                  <th class="py-3 px-2">Bedrag</th>
+                  <th class="md:py-3 md:px-2">Factuurnummer</th>
+                  <th class="md:py-3 md:px-2">Datum</th>
+                  <th class="md:py-3 md:px-2">Bedrag</th>
                 </tr>
               </thead>
               <tbody>
-                <tr class="border-b border-gray-200 text-sm text-black-900">
-                  <td class="py-3 px-2">20250012345</td>
-                  <td class="py-3 px-2">22-04-2025</td>
-                  <td class="py-3 px-2 flex items-center gap-2 justify-between">
+                <tr class="border-b border-gray-200 text-sm text-black-900 flex md:table-row flex-col py-2">
+                  <td class="md:py-3 md:px-2">20250012345</td>
+                  <td class="md:py-3 md:px-2">22-04-2025</td>
+                  <td class="md:py-3 md:px-2 flex items-center gap-2 justify-between">
                     € 395,-
                     <a href="#" class="text-primary font-medium underline ml-2 flex items-center">
                       Download
@@ -503,10 +619,10 @@
                     </a>
                   </td>
                 </tr>
-                <tr class="border-b border-gray-200 text-sm text-black-900">
-                  <td class="py-3 px-2">20250012345</td>
-                  <td class="py-3 px-2">22-04-2025</td>
-                  <td class="py-3 px-2 flex items-center gap-2 justify-between">
+                <tr class="border-b border-gray-200 text-sm text-black-900 flex md:table-row flex-col py-2">
+                  <td class="md:py-3 md:px-2">20250012345</td>
+                  <td class="md:py-3 md:px-2">22-04-2025</td>
+                  <td class="md:py-3 md:px-2 flex items-center gap-2 justify-between">
                     € 395,-
                     <a href="#" class="text-primary font-medium underline ml-2 flex items-center">
                       Download
@@ -519,10 +635,10 @@
                     </a>
                   </td>
                 </tr>
-                <tr class="border-b border-gray-200 text-sm text-black-900">
-                  <td class="py-3 px-2">20250012345</td>
-                  <td class="py-3 px-2">22-04-2025</td>
-                  <td class="py-3 px-2 flex items-center gap-2 justify-between">
+                <tr class="border-b border-gray-200 text-sm text-black-900 flex md:table-row flex-col py-2">
+                  <td class="md:py-3 md:px-2">20250012345</td>
+                  <td class="md:py-3 md:px-2">22-04-2025</td>
+                  <td class="md:py-3 md:px-2 flex items-center gap-2 justify-between">
                     € 395,-
                     <a href="#" class="text-primary font-medium underline ml-2 flex items-center">
                       Download
@@ -535,10 +651,10 @@
                     </a>
                   </td>
                 </tr>
-                <tr class="border-b border-gray-200 text-sm text-black-900">
-                  <td class="py-3 px-2">20250012345</td>
-                  <td class="py-3 px-2">22-04-2025</td>
-                  <td class="py-3 px-2 flex items-center gap-2 justify-between">
+                <tr class="border-b border-gray-200 text-sm text-black-900 flex md:table-row flex-col py-2">
+                  <td class="md:py-3 md:px-2">20250012345</td>
+                  <td class="md:py-3 md:px-2">22-04-2025</td>
+                  <td class="md:py-3 md:px-2 flex items-center gap-2 justify-between">
                     € 395,-
                     <a href="#" class="text-primary font-medium underline ml-2 flex items-center">
                       Download
@@ -555,7 +671,7 @@
             </table>
           </div>
           <div class="flex justify-center">
-            <button class="bg-yellow-700  px-6 py-2 font-medium text-black-900 text-roboto uppercase">
+            <button class="bg-yellow-700  px-6 py-2 font-medium text-black-900 text-roboto uppercase w-full md:w-auto">
               laad meer
             </button>
           </div>

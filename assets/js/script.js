@@ -20,13 +20,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     tabButtons.forEach(btn => {
         btn.addEventListener('click', function () {
+            this.scrollIntoView({ behavior: 'smooth', inline: 'center' });
+
             tabButtons.forEach(b => {
                 b.classList.remove('bg-pink-50');
-                // b.classList.add('border-transparent', 'text-gray-600');
             });
             this.classList.add('bg-pink-50');
 
-            // Content
             const tab = this.getAttribute('data-tab');
             tabContents.forEach(content => {
                 content.classList.add('hidden');

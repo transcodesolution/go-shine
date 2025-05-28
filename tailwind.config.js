@@ -36,7 +36,7 @@ tailwind.config = {
         },
       },
       fontsize: {
-        '4xl': '32px', // 32px
+        '4xl': '32px',
       }
     },
     plugins: [],
