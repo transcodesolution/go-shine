@@ -63,9 +63,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Basic validators
 const isText = (val) => /^[A-Za-zÀ-ÿ\s'-]+$/.test(val);
-const isPostcode = (val) => /^[0-9]{4}[A-Z]{2}$/.test(val);
 const isNumber = (val) => /^\d+$/.test(val);
-const isPhoneNumber = (val) => /^\d{10}$/.test(val); // Modify for intl
+const isPhoneNumber = (val) => /^(\+)?[0-9\s-]+$/.test(val);
 const isEmail = (val) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
 
 // Field-level validators
@@ -84,7 +83,7 @@ const validators = {
     },
     postcode: (val) => {
         if (!val) return "Postcode is verplicht.";
-        if (!isPostcode(val)) return "Gebruik formaat: 1234AB";
+        if (!isNumber(val)) return "Alleen cijfers toegestaan.";
         return "";
     },
     houseNumber: (val) => {
